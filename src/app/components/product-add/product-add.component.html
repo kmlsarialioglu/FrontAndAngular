@@ -1,0 +1,56 @@
+<div class="content">
+    <div class="col,md,12">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="title">Ürün Ekle</h5>
+            </div>
+            <div class="card-body">
+                <form [formGroup]="productAddForm">
+                    <div class="mb-3">
+                        <label for="productName" class="form-label">Ürün Adı</label>
+                        <input type="text" id="productName" formControlName="productName" class="form-control"
+                            placeholder="Ürün Adı" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="categoryId" class="form-label">Kategori</label>
+                        <input type="number" id="categoryId" formControlName="categoryId" class="form-control"
+                            placeholder="Kategori" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="suplierId" class="form-label">Satıcı Adı</label>
+                        <input type="number" id="suplierId" formControlName="suplierId" class="form-control"
+                            placeholder="Satıcı Adı" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="brandId" class="form-label">Marka</label>
+                        <input type="number" id="brandId" formControlName="brandId" class="form-control"
+                            placeholder="Marka" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="productDetail" class="form-label">Açıklama</label>
+                        <input type="text" id="productDetail" formControlName="productDetail" class="form-control"
+                            placeholder="Açıklama" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="productCode" class="form-label">Ürün Kodu</label>
+                        <input type="text" id="productCode" formControlName="productCode" class="form-control"
+                            placeholder="Ürün Kodu" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="unitPrice" class="form-label">Ürün Fiyatı</label>
+                        <input type="number" id="unitPrice" formControlName="unitPrice" class="form-control"
+                            placeholder="Ürün Fiyatı" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="inStock" class="form-label">Stok Adedi</label>
+                        <input type="number" id="inStock" formControlName="inStock" class="form-control"
+                            placeholder="Stok Adedi" />
+                    </div>
+                </form>
+            </div>
+            <div class="cart-footer">
+                <button class="btn btn-fill btn-secondary" (click)="add()">Ekle</button>
+            </div>
+        </div>
+    </div>
+</div>

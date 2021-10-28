@@ -1,0 +1,11 @@
+<ul class="list-group">
+   <h4 style=" margin-left:10px">KATEGORİLER</h4>
+  <li [class]="getAllCategoryClass()"
+  routerLink="/products" >TÜM ÜRÜNLER</li>
+  <li (click)="setCurrentCategory(category)"
+  routerLink = "/products/category/{{category.categoryId}}"
+  *ngFor="let category of categories"
+  [class]="getCurrentCategoryClass(category)">
+  {{category.categoryName}}</li>
+</ul>
+<h6 *ngIf="currentCategory">Seçtiğiniz Kategori : {{ currentCategory.categoryName }} </h6>
