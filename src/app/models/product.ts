@@ -5,7 +5,6 @@ export interface Product{
     brandId:number;
     productCode:string;
     productName:string;
-    productDetail:string;
     unitPrice:number;
-    inStock:number;
+    unitsInStock:number;
 }

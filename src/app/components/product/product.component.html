@@ -15,7 +15,6 @@ Aradığınız Ürün {{filterText}}
             <th>Satıcı</th>
             <th>Ürün Kodu</th>
             <th>Ürün Adı</th>
-            <th>Ürün Detayı</th>
             <th>Fiyat</th>
             <th>KDV Dahil Fiyat</th>
             <th>Stok Adedi</th>
@@ -28,10 +27,9 @@ Aradığınız Ürün {{filterText}}
             <td>{{ product.brandId }}</td>
             <td>{{ product.productCode }}</td>
             <td>{{ product.productName | uppercase }}</td>
-            <td>{{ product.productDetail }}</td>
             <td>{{ product.unitPrice |currency}}</td>
             <td>{{ product.unitPrice|vatAdded:18|currency }}</td>
-            <td>{{ product.inStock }}</td>
+            <td>{{ product.unitsInStock }}</td>
             <td><button (click)="addToCart(product)" type="button" class="btn btn-success">Sepete Ekle</button></td>
         </tr>
     </tbody>

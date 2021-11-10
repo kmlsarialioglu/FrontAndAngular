@@ -26,20 +26,25 @@ export class ProductAddComponent implements OnInit {
       brandId: ["", Validators.required],
       productCode: ["", Validators.required],
       productName: ["", Validators.required],
-      productDetail: ["", Validators.required],
       unitPrice: ["", Validators.required],
-      inStock: ["", Validators.required],
+      unitsInStock: ["", Validators.required]
     })
   }
   add() {
     if (this.productAddForm.valid) {
       let productModel = Object.assign({}, this.productAddForm.value)
       this.productService.add(productModel).subscribe(response => {
-        console.log(response)
-        this.toastrService.success("Ürün Başarıyla Eklendi","Başarılı")
-      })
-    } else {
+        this.toastrService.success(response.message,"Başarılı")
+      },responseError=>{
+          console.log(responseError.error.Errors)
+          this.toastrService.error(responseError.error,
+            "Doğrulama Hatası")
+          }
+        )
+      }
+    else {
       this.toastrService.error("Form Alanlarını Kontrol Ediniz","Dikkat")
     }
   }
 }
+

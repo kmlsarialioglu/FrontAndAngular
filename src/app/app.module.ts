@@ -27,8 +27,8 @@ import { ProductAddComponent } from './components/product-add/product-add.compon
     VatAddedPipe,
     FilterPipe,
     CartSummaryComponent,
-    ProductAddComponent,
-    
+    ProductAddComponent
+
   ],
   imports: [
     BrowserModule,
@@ -39,8 +39,8 @@ import { ProductAddComponent } from './components/product-add/product-add.compon
     ReactiveFormsModule,
     ToastrModule.forRoot({
       positionClass:"toast-top-right"
-    }),
-    
+    })
+
   ],
   providers: [],
   bootstrap: [AppComponent]
